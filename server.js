@@ -30,6 +30,10 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 //Routes
 
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "/public/html/indext.html"));
+});
+
 //Get route for scraping ESPN news
 app.get("/scrape", function (req, res) {
     //load page to scrape
