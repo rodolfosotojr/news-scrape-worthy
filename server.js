@@ -1,6 +1,7 @@
 //require my packages
 var express = require("express");
 var mongoose = require("mongoose");
+var path = require("path");
 
 //Global mongoose variable
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
@@ -31,7 +32,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 //Routes
 
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "/public/html/indext.html"));
+    res.sendFile(path.join(__dirname, "/public/html/index.html"));
 });
 
 //Get route for scraping ESPN news
