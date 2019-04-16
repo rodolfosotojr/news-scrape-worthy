@@ -65,7 +65,7 @@ app.get("/scrape", function (req, res) {
                 });
         });
 
-        res.send("Your articel scrape is complete!")
+        res.send("Your article scrape is complete! Please visit the home page for your articles.");
     });
 });
 
