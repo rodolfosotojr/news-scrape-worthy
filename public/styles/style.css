@@ -1,8 +1,22 @@
 body {
     background-image: url("../images/background_image.jpg");
-    background-color: blue;
+}
+
+h1 {
+    background-color: white;
+    max-width: 125px;
 }
 
 h2 {
-    font-size: 55px;
+    background-color: white;
+    max-width: 900px;
+    padding: 15px;
+}
+
+#articles {
+    background-color: white;
+}
+
+#notes {
+    background-color: white;
 }
