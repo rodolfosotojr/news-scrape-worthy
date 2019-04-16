@@ -11,8 +11,9 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 //Require models directory
-// var db = require("./models");
+var db = require("./models");
 
+//PORT used locally and deployed
 var PORT = process.env.PORT || 3001 ;
 
 //Initialize express
@@ -24,7 +25,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static(__dirname + "/public/html"));
+app.use(express.static(__dirname + "/public"));
 
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
